@@ -1,5 +1,7 @@
 use std::error::Error;
-use std::fmt;
+use std::thread::sleep;
+use std::time::Duration;
+use std::{fmt, thread};
 
 #[derive(Debug)]
 struct CustomError {
@@ -25,16 +27,22 @@ fn do_something() -> Result<(), Box<dyn Error>> {
     }))
 }
 
-fn main(){
-    let closure = ||{
-        do_something().unwrap()
+fn main() {
+    std::panic::set_hook(Box::new(|_| {
+        println!("panic thread{:?}", thread::current().id());
+    }));
+
+    let closure = || {
+        println!("parent thread {:?}", thread::current().id());
+        std::thread::spawn(|| {
+            println!("new thread {:?}", thread::current().id());
+            do_something().unwrap()
+        });
     };
 
-    if let Err(e) = std::panic::catch_unwind(closure){
+    if let Err(e) = std::panic::catch_unwind(closure) {
         println!("{:?}", e);
     }
 
-    if let Err(e) = do_something() {
-        println!("{e}");
-    }
+    sleep(Duration::from_secs(5))
 }
