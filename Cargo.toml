@@ -1,4 +1,4 @@
-workspace = { members = [ "examples/binary_tree", "examples/builder","examples/fibonacci", "examples/health_statics"] }
+workspace = { members = [ "examples/binary_tree", "examples/builder","examples/fibonacci", "examples/health_statics", "examples/protocol_parser"] }
 
 [package]
 name = "rust-exercise"

@@ -43,6 +43,7 @@ impl User {
         };
         self.last_blood_pressure = Some(measurements.blood_pressure);
         self.visit_count += 1;
+        self.height = measurements.height;
         HealthReport {
             patient_name: &self.name,
             visit_count: self.visit_count as u32,
