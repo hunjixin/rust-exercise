@@ -32,6 +32,10 @@ name = "fibonacci"
 version = "0.1.0"
 
 [[package]]
+name = "find_kth_largest"
+version = "0.1.0"
+
+[[package]]
 name = "find_mid_value"
 version = "0.1.0"
 
@@ -72,6 +76,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "quick_sort"
+version = "0.1.0"
+
+[[package]]
 name = "quote"
 version = "1.0.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -79,6 +87,10 @@ checksum = "0fa76aaf39101c457836aec0ce2316dbdc3ab723cdda1c6bd4e6ad4208acaca7"
 dependencies = [
  "proc-macro2",
 ]
+
+[[package]]
+name = "raw_pointer"
+version = "0.1.0"
 
 [[package]]
 name = "rev_link"
