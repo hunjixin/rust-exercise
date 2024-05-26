@@ -64,7 +64,7 @@ pub unsafe fn reverse_k_group(
                     //assigne newhead for first k group
                     new_head = k_list;
                 } else {
-                    last_tail.as_mut().unwrap().as_mut().next = k_list;
+                    last_tail.as_mut().unwrap().as_mut().next = k_list; //join current group to previous group
                 }
 
                 last_tail = start_k_head;
