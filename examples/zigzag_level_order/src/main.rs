@@ -32,7 +32,7 @@ fn zigzag_level_order(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
 
     let mut result = vec![];
     let mut level = 0;
-    while !(odd_dep.is_empty() && evn_dep.is_empty()){
+    while !(odd_dep.is_empty() && evn_dep.is_empty()) {
         let mut level_vals = vec![];
         if level % 2 == 0 {
             while !evn_dep.is_empty() {
@@ -71,7 +71,6 @@ fn zigzag_level_order(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
     result
 }
 
-
 fn zigzag_level_order_v2(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
     if root.is_none() {
         return vec![];
@@ -81,7 +80,7 @@ fn zigzag_level_order_v2(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
     let mut result = vec![];
     let mut reverse = false;
 
-    while !dep.is_empty(){
+    while !dep.is_empty() {
         let mut level_vals = vec![];
         for _ in 0..dep.len() {
             if let Some(node) = dep.pop_front() {
@@ -105,29 +104,27 @@ fn zigzag_level_order_v2(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
     result
 }
 
-
 fn main() {
     {
-            //[[3], [20, 9], [7, 15]]
-            let node15 = TreeNode::new(15);
-            let node7 = TreeNode::new(7);
-        
-            let mut node20 = TreeNode::new(20);
-            let mut node9 = TreeNode::new(9);
-        
-            let mut node3 = TreeNode::new(3);
-        
-            node20.left = Some(Rc::new(RefCell::new(node15)));
-            node9.left = Some(Rc::new(RefCell::new(node7)));
-        
-        
-            node3.left = Some(Rc::new(RefCell::new(node9)));
-            node3.right = Some(Rc::new(RefCell::new(node20)));
-        
-            let root =  Some(Rc::new(RefCell::new(node3)));
-        
-            let result=  zigzag_level_order_v2(root);
-        
+        //[[3], [20, 9], [7, 15]]
+        let node15 = TreeNode::new(15);
+        let node7 = TreeNode::new(7);
+
+        let mut node20 = TreeNode::new(20);
+        let mut node9 = TreeNode::new(9);
+
+        let mut node3 = TreeNode::new(3);
+
+        node20.left = Some(Rc::new(RefCell::new(node15)));
+        node9.left = Some(Rc::new(RefCell::new(node7)));
+
+        node3.left = Some(Rc::new(RefCell::new(node9)));
+        node3.right = Some(Rc::new(RefCell::new(node20)));
+
+        let root = Some(Rc::new(RefCell::new(node3)));
+
+        let result = zigzag_level_order_v2(root);
+
         println!("{:?}", result);
     }
 
@@ -144,14 +141,13 @@ fn main() {
         node20.left = Some(Rc::new(RefCell::new(node15)));
         node20.right = Some(Rc::new(RefCell::new(node7)));
 
-
         node3.left = Some(Rc::new(RefCell::new(node9)));
         node3.right = Some(Rc::new(RefCell::new(node20)));
 
-        let root =  Some(Rc::new(RefCell::new(node3)));
+        let root = Some(Rc::new(RefCell::new(node3)));
 
-    let result=  zigzag_level_order_v2(root);
+        let result = zigzag_level_order_v2(root);
 
-    println!("{:?}", result);
+        println!("{:?}", result);
     }
 }
