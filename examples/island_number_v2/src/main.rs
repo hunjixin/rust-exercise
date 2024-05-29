@@ -1,3 +1,5 @@
+use std::vec;
+
 #[inline]
 fn in_grid(grid: &Vec<Vec<char>>, x: usize, y: usize) -> bool {
     return x < grid.len() && y < grid[0].len();
@@ -44,8 +46,8 @@ pub fn num_islands(mut grid: Vec<Vec<char>>) -> i32 {
 fn main() {
     let mut arr = vec![
         vec!['1', '1', '1', '1', '0'],
-        vec! ['1', '1', '0', '1', '0'],
-        vec! ['1', '1', '0', '0', '0'],
+        vec!['1', '1', '0', '1', '0'],
+        vec!['1', '1', '0', '0', '0'],
         vec!['0', '0', '0', '0', '0'],
     ];
     let numbner = num_islands(arr);

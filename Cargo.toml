@@ -4,7 +4,7 @@ workspace = { members = [  "examples/binary_tree",
   "examples/fibonacci", "examples/find_kth_largest", 
   "examples/find_mid_value", "examples/find_substr", 
   "examples/health_statics", "examples/island_number", "examples/island_number_v2",
-   "examples/iterator", "examples/lrucache", 
+   "examples/iterator", "examples/lrucache", "examples/max_profit", 
    "examples/mem_layout",
     "examples/protocol_parser", "examples/quick_sort", "examples/raw_pointer", "examples/rev_link", "examples/reversekgroup", "examples/sum_three",  "examples/tree_walk", "examples/zigzag_level_order"] }
 
