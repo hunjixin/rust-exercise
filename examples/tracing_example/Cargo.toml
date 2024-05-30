@@ -1,0 +1,9 @@
+[package]
+name = "tracing_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tracing = "0.1.40"
+tracing-subscriber = {version = "0.3.0", features = ["json", "env-filter"]}
+tracing-attributes = "0.1.27"
