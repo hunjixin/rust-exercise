@@ -1,0 +1,9 @@
+[package]
+name = "bigint"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+num-bigint = "0.4.5"
+num-bigfloat = "1.7.1"
+astro-float = "=0.4.1"
