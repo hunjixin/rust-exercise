@@ -6,7 +6,7 @@ workspace = { members = [ "examples/bigint",  "examples/binary_tree",
   "examples/health_statics", "examples/island_number", "examples/island_number_v2",
    "examples/iterator", "examples/kube-api", "examples/lrucache", "examples/max_profit", 
    "examples/mem_layout",
-    "examples/protocol_parser", "examples/quick_sort", "examples/raw_pointer", "examples/rev_link", "examples/reversekgroup", "examples/sum_three", "examples/tracing_example",  "examples/tree_walk", "examples/zigzag_level_order"] }
+    "examples/protocol_parser", "examples/quick_sort", "examples/raw_pointer", "examples/rev_link", "examples/reversekgroup", "examples/serdejsontest", "examples/sum_three", "examples/tracing_example",  "examples/tree_walk", "examples/zigzag_level_order"] }
 
 [package]
 name = "rust-exercise"
