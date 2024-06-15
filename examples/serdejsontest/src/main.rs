@@ -1,29 +1,28 @@
 #![feature(trait_alias)]
 
-
+use serde::{de::DeserializeOwned, Deserialize, Serialize};
 use std::hash::Hash;
-use serde::{de::DeserializeOwned, Serialize, Deserialize};
 
-pub trait GID =  Eq + Clone + Copy + Hash + Serialize + for<'de> Deserialize<'de>;
+pub trait GID = Eq + Clone + Copy + Hash + Serialize + for<'de> Deserialize<'de>;
 
-
-
-pub trait Unit<ID> where ID:GID {
+pub trait Unit<ID>
+where
+    ID: GID,
+{
     fn id(&self) -> ID;
     fn name(&self) -> String;
 }
 
-
 // Channel use to definite data transfer channel
-#[derive(Serialize, Deserialize, Debug,Clone)]
-pub struct Channel {
-}
-
+#[derive(Serialize, Deserialize, Debug, Clone)]
+pub struct Channel {}
 
 // ComputeUnit used to define logic for data generation, transformer, ouput
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct ComputeUnit<ID>
-where ID:GID {
+where
+    ID: GID,
+{
     #[serde(bound(deserialize = ""))]
     pub id: ID,
 
@@ -37,7 +36,7 @@ where ID:GID {
     pub(crate) dependency: Vec<ID>,
 }
 
-impl<ID:GID> Unit<ID> for ComputeUnit<ID> {
+impl<ID: GID> Unit<ID> for ComputeUnit<ID> {
     fn id(&self) -> ID {
         self.id
     }
