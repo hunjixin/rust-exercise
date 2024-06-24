@@ -1,0 +1,9 @@
+[package]
+name = "tokio_channel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.38.0", features = ["macros", "rt-multi-thread"] }
+tokio-retry = "0.3"
+tokio-stream = "0.1.15"

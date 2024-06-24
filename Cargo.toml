@@ -1,12 +1,12 @@
 workspace = { members = [ "examples/async_trait_test", "examples/bigint",  "examples/binary_tree",
- "examples/builder", "examples/bytes_learn",
+ "examples/builder", "examples/bytes_learn", "examples/cmd",
   "examples/error_handle",
   "examples/fibonacci", "examples/find_kth_largest", 
   "examples/find_mid_value", "examples/find_substr", 
   "examples/health_statics", "examples/island_number", "examples/island_number_v2",
    "examples/iterator", "examples/kube-api", "examples/lrucache", "examples/max_profit", 
    "examples/mem_layout",
-    "examples/protocol_parser", "examples/quick_sort", "examples/raw_pointer", "examples/rev_link", "examples/reversekgroup", "examples/serdejsontest", "examples/sum_three", "examples/tracing_example",  "examples/tree_walk", "examples/zigzag_level_order"] }
+    "examples/protocol_parser", "examples/quick_sort", "examples/raw_pointer", "examples/rev_link", "examples/reversekgroup", "examples/serdejsontest", "examples/sum_three", "examples/tokio_channel", "examples/tracing_example",  "examples/tree_walk", "examples/zigzag_level_order"] }
 
 [package]
 name = "rust-exercise"
