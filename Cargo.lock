@@ -1440,6 +1440,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "send_sync"
+version = "0.1.0"
+
+[[package]]
 name = "serde"
 version = "1.0.203"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1719,6 +1723,15 @@ dependencies = [
 
 [[package]]
 name = "tokio_channel"
+version = "0.1.0"
+dependencies = [
+ "tokio",
+ "tokio-retry",
+ "tokio-stream",
+]
+
+[[package]]
+name = "tokio_stream"
 version = "0.1.0"
 dependencies = [
  "tokio",
