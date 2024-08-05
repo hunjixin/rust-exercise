@@ -5,7 +5,6 @@ enum Message {
     ChangeColor(i32, i32, i32),
 }
 
-
 fn main() {
     let msg = Box::new(Message::Move { x: 10, y: 20 });
     match *msg {
